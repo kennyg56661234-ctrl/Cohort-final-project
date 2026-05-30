@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalEats Pro+</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Leaflet Map Library -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+<!-- CART SIDEBAR -->
+<div id="cartPanel" class="cart-panel">
+  <div class="cart-header">
+    <h2>🛒 Your Cart</h2>
+    <button onclick="toggleCart()">✖</button>
+  </div>
+
+  <div id="cart"></div>
+
+  <!-- PAYMENT BUTTON -->
+  <button id="checkoutButton" onclick="checkout()" class="geo-btn">
+    💳 Pay Now
+  </button>
+</div>
+
+  <div id="cart"></div>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <h2>🌱 LocalEats Pro+</h2>
+
+  <div>
+    🛒 <button onclick="toggleCart()" class="cart-btn">
+      Cart (<span id="cartCount">0</span>)
+    </button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+  <h1>Farm Fresh Marketplace</h1>
+  <p>300+ seasonal dishes connected to real PEI farms</p>
+</header>
+
+<!-- Split Layout: Menu + Map -->
+<div class="layout">
+
+  <!-- Left Panel: Menu -->
+  <div class="menu">
+    <h2>🍽 Menu</h2>
+    <button onclick="findNearestFarm()" class="geo-btn">📍 Find Nearest Farm</button>
+    <div id="menu"></div>
+  </div>
+
+  <!-- Right Panel: Map -->
+  <div class="map">
+    <h2>🗺 Farm Map</h2>
+    <div id="map"></div>
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+</body>
+</html>
